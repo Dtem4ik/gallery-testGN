@@ -1,0 +1,70 @@
+/* Сброс стандартных стилей браузера */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Убираем подчёркивание у ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Сброс стилей для списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Обнуляем отступы у заголовков и абзацев */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* Сброс стилей таблицы */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Убираем бордеры и фокусные стили у кнопок */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Убираем стандартные стили у полей формы */
+input,
+textarea {
+  outline: none;
+  border: none;
+  font-family: inherit;
+}
+
+/* Установка минимальной высоты и ширины на 100% для элементов html и body */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px; /* Можно настроить по умолчанию */
+  font-family: sans-serif; /* Базовый шрифт */
+  line-height: 1.5;
+}
+
+/* Сброс стилей изображений */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
