@@ -1,19 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'reset';
 
 body {
   --app-theme-primary-blue-500: #007bff;
+  --app-theme-primary-blue-600: #0070e8;
   --app-theme-primary-blue-50: #e6f2ff;
+  --app-theme-primary-blue-100: #b0d6ff;
   --app-theme-neutral-50: #f9fafb;
   --app-theme-neutral-100: #f7f9fc;
   --app-theme-neutral-200: #f0f2f5;
+  --app-theme-neutral-500: #98a2b3;
   --app-theme-neutral-600: #667185;
   --app-theme-neutral-900: #1d2739;
+  --app-theme-neutral-new: #98a2b3;
   --app-theme-white: #fff;
 
   //fonts
 
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--app-theme-neutral-100);
   font-style: normal;
   color: var(--app-theme-neutral-900);
@@ -33,15 +37,23 @@ body {
 }
 .bg-white {
   background: var(--app-theme-white);
+  --hover-bg: var(--app-theme-primary-blue-600);
 }
 .bg-primary-500 {
   background: var(--app-theme-primary-blue-500);
+  color: var(--app-theme-white);
 }
 .bg-primary-50 {
   background: var(--app-theme-primary-blue-50);
 }
 .bg-neutral-100 {
   background: var(--app-theme-neutral-100);
+  color: var(--app-theme-neutral-900);
+  --hover-bg: var(--app-theme-primary-blue-50);
+  --active-bg: var(--app-theme-primary-blue-100);
+}
+.text-neutral-new {
+  color: var(--app-theme-neutral-new);
 }
 .rounded-16 {
   border-radius: 16px;
@@ -60,6 +72,9 @@ body {
 }
 .justify-space-between {
   justify-content: space-between;
+}
+.flew-wrap {
+  flex-wrap: wrap;
 }
 .ga-12 {
   gap: 12px;
