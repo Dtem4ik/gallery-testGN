@@ -162,5 +162,13 @@
     .custom-input {
       min-width: 360px;
     }
+
+    @media (max-width: 920px) {
+      flex-direction: column;
+      gap: 12px;
+      .custom-input {
+        min-width: 100%;
+      }
+    }
   }
 </style>

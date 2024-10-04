@@ -17,7 +17,7 @@
             {{ book.first_publish_year || '-' }}
           </td>
           <td class="py-20" width="50%">
-            <div class="d-flex align-center ga-12 flew-wrap">
+            <div class="d-flex align-center ga-12 flex-wrap">
               <div
                 v-for="(badge, j) in formatDisplay(book?.format, i)"
                 :key="`badge-${i}-${j}`"
@@ -82,12 +82,15 @@
   .data-table {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    overflow-x: auto;
   }
   .custom-table {
     width: 100%;
     height: 100%;
     table-layout: fixed;
     border-collapse: collapse;
+    min-width: 800px;
     thead {
       display: block;
       width: 100%;
@@ -107,12 +110,17 @@
       }
     }
     tbody {
-      display: block;
+      display: flex;
+      flex-direction: column;
       width: 100%;
       max-height: calc(100vh - 226px);
       overflow-y: auto;
       overflow-x: hidden;
+      @media (max-width: 920px) {
+        max-height: calc(100vh - 320px);
+      }
       tr {
+        flex: 1;
         table-layout: auto;
         background-color: var(--app-theme-white);
         transition: background 0.2s;
@@ -122,6 +130,7 @@
         }
       }
       td {
+        display: inline-block;
         padding: 24px 24px;
         font-size: 14px;
         line-height: 16px;
